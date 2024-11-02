@@ -1,0 +1,25 @@
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.user-card h3 {
+    margin: 0;
+}
+.user-details {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+button {
+    margin-left: 10px;
+}
