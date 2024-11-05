@@ -1,0 +1,81 @@
+/* HistorialPedidos.css */
+.background-div {
+  position: relative;
+  background-image: url('../assets/fondo.png');
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  background-position: top left;
+  height: 100vh;
+}
+
+.background-div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 191, 96, 0.5);
+  z-index: 1;
+}
+
+.historial-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.title-box {
+  display: inline-block;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pedidos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pedido-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 3;
+  width: auto; /* Permitir que la tarjeta se ajuste al contenido */
+  max-width: calc(100% - 20px); /* Ajustar el ancho total con margen */
+  overflow: hidden; /* Evitar que el contenido sobresalga */
+  margin-left: 10px; /* Margen a la izquierda */
+  margin-right: 10px; /* Margen a la derecha */
+}
+
+.pedido-item:hover {
+  transform: translateY(-2px);
+}
+
+.pedido-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #4CAF50;
+}
+
+.pedido-item p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+.pedido-item ul {
+  padding: 0; /* Remover el padding de la lista */
+  margin: 0; /* Remover el margin de la lista */
+}

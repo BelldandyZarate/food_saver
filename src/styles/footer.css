@@ -1,0 +1,113 @@
+/* Footer Styles */
+
+.footer {
+  background-color: #333; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 15px 0; /* Espaciado */
+}
+
+.footer-container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 0 20px; /* Espaciado lateral */
+}
+
+.footer-columns {
+  display: flex; /* Usar flexbox para las columnas */
+  justify-content: space-between; /* Espacio entre columnas */
+  align-items: flex-start; /* Alinear columnas al inicio */
+  margin-bottom: 20px; /* Espacio debajo de las columnas */
+  flex-wrap: wrap; /* Permitir que las columnas se envuelvan en pantallas pequeñas */
+}
+
+.footer-logo-column {
+  flex: 2; /* Columna para el logotipo */
+}
+
+.footer-logo {
+  font-size: 24px; /* Tamaño del logotipo */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 20px; /* Espacio debajo del logotipo */
+  color: white;
+}
+
+.footer-column {
+  flex: 1; /* Cada columna ocupa el mismo espacio */
+  margin-left: 20px; /* Espaciado lateral entre columnas */
+  text-align: left; /* Alinear texto a la izquierda */
+  min-width: 150px; /* Tamaño mínimo para columnas */
+}
+
+.footer-links,
+.footer-social-links,
+.footer-contact {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margen */
+  color: white;
+}
+
+.footer-links li,
+.footer-social-links li,
+.footer-contact li {
+  margin-bottom: 5px; /* Espacio entre enlaces */
+}
+
+.footer-links a,
+.footer-social-links a,
+.footer-contact a {
+  color: white; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.footer-links a:hover,
+.footer-social-links a:hover,
+.footer-contact a:hover {
+  text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+.footer-column p {
+  color: white;
+}
+
+.footer-column h2 {
+  font-size: 18px; /* Tamaño de los títulos de las columnas */
+  margin-bottom: 10px; /* Espacio debajo de los títulos */
+  color: #E5652D;
+}
+
+.footer-info {
+  text-align: left; /* Alinear texto a la izquierda */
+  padding: 10px 0; /* Espaciado */
+  margin-top: 20px; /* Espacio superior */
+  border-top: 1px solid white; /* Línea superior */
+}
+
+.footer-info p {
+  margin: 5px 0; /* Espacio entre párrafos */
+  font-size: 14px; /* Tamaño de fuente */
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-columns {
+      flex-direction: column; /* Columna única en móviles */
+      align-items: center; /* Centrar columnas */
+  }
+
+  .footer-column {
+      margin-left: 0; /* Sin margen lateral en móviles */
+      margin-bottom: 20px; /* Espacio entre columnas en móviles */
+  }
+
+  .footer-info {
+      text-align: center; /* Centrar texto en dispositivos pequeños */
+  }
+.footer-logo-image {
+  width: 100px;  /* Ancho de 100 píxeles */
+  height: 100px; /* Alto de 100 píxeles */
+  object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+}
+
+}
