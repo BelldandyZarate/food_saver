@@ -1,0 +1,36 @@
+.products-container {
+    padding: 20px;
+  }
+  
+  .search-input {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+  }
+  
+  .product-card {
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 16px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.2s; /* Transición para el efecto hover */
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el ratón */
+  }
+  
+  .product-card p {
+    margin: 4px 0; /* Espaciado entre líneas de texto */
+  }
+  
