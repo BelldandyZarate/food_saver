@@ -1,0 +1,38 @@
+.background-div {
+    position: relative; /* Asegúrate de que el contenedor sea relativo */
+    background-image: url('../assets/fondo.png');
+    background-repeat: repeat; /* La imagen se repetirá */
+    background-size: 600px 600px; /* Tamaño de la imagen */
+    background-position: top left;
+    height: 100vh; /* Altura del div */
+  }
+
+.form-container {
+    position: relative;
+    background-color: white; /* Fondo blanco sólido */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 50px auto; /* Centrar el contenedor */
+    max-width: 600px; /* Ancho máximo del formulario */
+    z-index: 2; /* Asegurarse de que esté por encima del fondo */
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-primaryV {
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primaryV:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+}

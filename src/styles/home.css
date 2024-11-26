@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que el contenedor ocupe al menos la altura completa de la ventana */
+  text-align: center;
+}
+
+.navbar1 {
+  background-color: #e5652d; /* Color de fondo para la navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Espaciado */
+}
+
+.navbar1 .logo {
+  color: white; /* Color del logotipo */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espaciado entre enlaces */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.btn-primary1,
+.btn-secondary {
+  background-color: #ffcf2b; /* Color de fondo del botón */
+  color: black; /* Color del texto del botón */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.btn-primary1:hover,
+.btn-secondary:hover {
+  opacity: 0.8; /* Efecto de opacidad al pasar el mouse */
+}
+
+.hero {
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  background-image: url('../assets/inicio.png'); /* Cambia esta URL por la imagen que quieras usar */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  color: white; /* Asegúrate de que el texto sea visible */
+  text-align: center;
+  padding: 100px 20px; /* Añade espacio para la altura de la sección */
+}
+
+.hero::before {
+  content: ''; /* Necesario para el pseudo-elemento */
+  position: absolute; /* Posiciona el pseudo-elemento */
+  top: 0; /* Alinea al inicio */
+  left: 0; /* Alinea al inicio */
+  right: 0; /* Alinea al final */
+  bottom: 0; /* Alinea al final */
+  background: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+  z-index: 1; /* Asegúrate de que esté detrás del texto */
+}
+
+.hero h2, 
+.hero p, 
+.hero .btn-primary1 { /* Asegúrate de que los elementos de texto y botón estén por encima */
+  position: relative; /* Permite que el texto y el botón estén por encima del pseudo-elemento */
+  z-index: 2; /* Asegúrate de que el texto y el botón estén por encima */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.features {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.features h3 {
+  margin-bottom: 2rem;
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: column; /* Cambia a columna en móviles */
+  gap: 15px; /* Espacio entre las tarjetas */
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%; /* Full width en móviles */
+}
+
+.card h4 {
+  margin-bottom: 1rem;
+}
+
+.cta {
+  padding: 2rem 1rem;
+  background-color: #e5652d;
+  color: white;
+  margin-top: auto; /* Empuja el footer hacia el fondo */
+}
+
+.cta h3 {
+  margin-bottom: 2rem; /* Separa el título del botón */
+}
+
+.cta p {
+  margin-bottom: 3rem; /* Separa el texto del botón */
+}
+
+.features-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.features-container h1 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-item {
+  background-color: #f5bf60;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  color: #e5652d;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  color: black;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-info {
+  margin-top: auto; /* Asegura que la información del pie de página esté al final */
+}
+
+.footer-info p {
+  margin: 0.5rem 0; /* Espaciado entre líneas */
+}
+
+/* Responsivo para pantallas más grandes */
+@media (min-width: 768px) {
+  .feature-cards {
+    flex-direction: row; /* Cambia a fila en pantallas más grandes */
+    justify-content: space-between; /* Distribuye las tarjetas en fila */
+  }
+
+  .card {
+    width: 30%; /* Ancho fijo para las tarjetas en pantallas grandes */
+    margin: 0 10px; /* Espacio entre las tarjetas */
+  }
+}

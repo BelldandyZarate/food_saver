@@ -1,0 +1,207 @@
+.background-div {
+    position: relative;
+    background-image: url('../assets/fondo.png');
+    background-repeat: repeat;
+    background-size: 600px 600px;
+    background-position: top left;
+    height: 100vh;
+}
+
+.background-div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 191, 96, 0.5); /* Color con 50% de opacidad */
+    z-index: 1;
+}
+
+.dashboard-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    flex-direction: column;
+    align-items: center; /* Centra los elementos */
+}
+
+h1, h2, p {
+    position: relative;
+    z-index: 2;
+    color: black;
+}
+
+.navbar {
+    position: relative;
+    z-index: 3;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.btn-standard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.icon-inside-button {
+    width: 110px;
+    height: 110px;
+    margin-right: 10px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* 5 productos por fila */
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    justify-items: center; /* Centra las tarjetas */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;  /* Asegura que las tarjetas ocupen todo el ancho disponible */
+    z-index: 2;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primaryC {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.btn-primaryC:hover {
+    background-color: #0056b3;
+}
+
+.quantity-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.title-box {
+    display: inline-block;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Filtros de búsqueda */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 4;  /* Asegura que se mantenga por encima del fondo */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);  /* Fondo blanco con opacidad */
+    border-radius: 5px;
+}
+
+.filter-input {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.filter-button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background-color: #218838;
+}
+
+.search-bar-container {
+    position: relative;
+    z-index: 10;  /* Asegura que la barra de búsqueda esté por encima de otros elementos */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 2;  /* Mantiene la barra de búsqueda por encima del fondo */
+}
+
+.search-input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-btn {
+    background-color: #17a2b8;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #138496;
+}
